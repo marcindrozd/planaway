@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: planaway_development
+
+test:
+  <<: *default
+  database: planaway_test
+
+production:
+  <<: *default
+  database: planaway_production
+  username: planaway
+  password: <%= ENV['PLANAWAY_DATABASE_PASSWORD'] %>
