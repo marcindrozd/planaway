@@ -1,24 +1,6 @@
-# README
+[![Build Status](https://travis-ci.org/marcindrozd/planaway.svg?branch=master)](https://travis-ci.org/marcindrozd/planaway)
+[![codebeat badge](https://codebeat.co/badges/b22b9f13-2e5a-427c-830d-87b60d502489)](https://codebeat.co/projects/github-com-marcindrozd-planaway-master)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Planaway
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+An app for all planning things
