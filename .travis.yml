@@ -12,6 +12,7 @@ install:
 script:
 - bundle exec rake
 - rubocop
+- brakeman
 deploy:
   provider: heroku
   app: iheartplanning
