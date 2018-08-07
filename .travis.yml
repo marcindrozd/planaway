@@ -11,6 +11,7 @@ install:
 - yarn
 script:
 - bundle exec rake
+- rubocop
 deploy:
   provider: heroku
   app: iheartplanning
