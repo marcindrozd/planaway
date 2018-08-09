@@ -1,18 +1,25 @@
 language: ruby
 before_install:
 - gem update --system
+addons:
+  postgresql: "9.6"
 rvm:
 - 2.5.1
+services:
+- postgresql
 install:
 - bundle install
 - nvm install node
 - node -v
 - npm i -g yarn
 - yarn
+before_script:
+- psql -c 'create database planaway_test;' -U postgres
 script:
+- bundle exec rails db:migrate RAILS_ENV=test
 - bundle exec rake
-- rubocop
-- brakeman
+- bundle exec rubocop
+- bundle exec brakeman
 deploy:
   provider: heroku
   app: iheartplanning
