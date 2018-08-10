@@ -7,6 +7,7 @@ ruby "2.5.1"
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", ">= 1.1.0", require: false
+gem "knock"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.0"
@@ -17,6 +18,7 @@ gem "uglifier", ">= 1.3.0"
 gem "webpacker"
 
 group :development, :test do
+  gem "dotenv-rails"
   gem "pry"
   gem "rspec-rails"
 end
