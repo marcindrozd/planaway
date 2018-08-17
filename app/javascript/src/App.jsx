@@ -1,12 +1,14 @@
 import React from 'react';
 
-import './stylesheets/application.scss';
 import './stylesheets/reset.scss';
+import './stylesheets/application.scss';
 
 const App = () => (
-  <h1>
-    Hello, world
-  </h1>
+  <div className="App">
+    <header className="App-header">
+      <h1 className="App-title">Hello, world</h1>
+    </header>
+  </div>
 );
 
 export default App;
