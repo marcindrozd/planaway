@@ -1,8 +1,17 @@
 language: ruby
+addons:
+  postgresql: '10'
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
 before_install:
 - gem update --system
-addons:
-  postgresql: "11"
+- sudo cp /etc/postgresql/{9.6,10}/main/pg_hba.conf
+- sudo /etc/init.d/postgresql restart
+env:
+  global:
+  - PGPORT=5433
 rvm:
 - 2.6.2
 services:
@@ -24,4 +33,4 @@ deploy:
   provider: heroku
   app: iheartplanning
   api_key:
-    secure: A09g0R6chQahKqn6jwcdjs6lxFkBn7SyLyzdqhyq00dVR9QDKtjetKIYpGgk/eslSPZncH7odMMhcrp6L5753IctFSVIQAIyq4VD28tbsd/1baa2tuGE/8TvTbWke8qTY8mqocm5YZndEIRi7UQ8tImoJTgaP/piKIN/uhxISAXuct6TbmBDF3NMQqe1VZDCbSaSN/6SnXnTtgyIJyfbSmCU8bjnW0W4YbQlRHRH0cqW9xVngGvf/0AapaYOZcMKZ9ZkRl38jbYGoo8viQkn0ON5MdnlbXeP5s31gWHhW3mQfAsTpZbxU1b+Ijw5mOcxYc/p+dL+Ju7LtDaSIRCm5KW8i0MjNxBV9vO9Jwh82flhFdKWLQTO8TX86VihQLbvUD0OXLebuQ5fxNmMYgcvOnaD99Fq4rt+hSb/kcbxMOQgquwJD3JgInGOovG84E3L9C5O5a4U1vW8Scf6t6QnEFLXS1LuJmH+vOmerdGQaTfeDJ8vgfIaRWa7mnXfGcdBYk5ooL5/TBfq7Ievsh04C20r0WHD1u2HbEEsTPSrGhSPflTxqelcZ3XSC+Pcpch2ZGsrnFs4vZxeTz+6DstwsIuH15F6r2mfBzFnVi5Ff/qxxGR3WihtAuMZoZW7rpRwGeVgQ+A5gNQvX6qUqsRwXYQSl9CPvtHOH9nVph1wtSE=
+    secure: SxKdKQNbg5pP9OMdwstBiCOVjsq/kSzz50gUhICHumlepuMMQ+av+Nqb8joF1hIXHeT90LVpS2eWZQBPitn1DgnVnX/H6OyAXI/rMAx9ElgWwVWgEy9juGU8Yp7fNEsilyJTBhfl+63lQsJvo3iMNFweF5QHKZFRrRgcfd/MfsTaViijzYSMfK60zElNk5SUx9vay2no8CJkEqpvvP4qHDHo1tZYrCVW0RJB3U5ux9TouFE372/Zcm/lnQmYt4VGrGazLKJz4AVQgeWYD/bWDx8CuTELreTQDCedX/1K6PuMx8L+QtqygE8dvT5fHO028uADCFwbkNqwdVptuVPKRFOILEiNDtuZV7DHfH9UHAEAjaX16Jm1WXvO7taIhiYXjgu2iQBNTmUhzhl1kC0NWFTI/P6DusJ5xElaUN9iP69Mrl68CD1xJlCUrDB3YdZzzYOk228GO/JjYJffedWf0NgBNwd2jKzLLKe3Q5AydsSHAXDNWGz5j7xFSooNiJ64fx1H2VoRJdNgwF2gQ2aZ5QrawvflGv9CZcRsUJo17dL3jsW8CP0/XLRRYor+Jd53t58P4wWEEcFuZl+s6CAKrRcUAMkeoYZf3pF/BH5HPqSpkOWp2EEcw6DHn6+/X3DyYaGbdcR9b92Br6NrjU59/5od9Yl5WYiOY8VyLCWIbxY=
