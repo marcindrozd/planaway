@@ -2,7 +2,7 @@ language: ruby
 before_install:
 - gem update --system
 addons:
-  postgresql: "9.6"
+  postgresql: "11"
 rvm:
 - 2.6.2
 services:
