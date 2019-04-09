@@ -1,21 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
-import 'typeface-roboto';
 
-import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import TextField from '@material-ui/core/TextField';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import AccountCircle from '@material-ui/icons/AccountCircleOutlined';
-import Lock from '@material-ui/icons/LockOutlined';
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+import {
+  AppBar,
+  Grid,
+  Toolbar,
+  Typography,
+  Button,
+  Card,
+  CardContent,
+  TextField,
+  InputAdornment,
+  FormControl,
+  FormControlLabel,
+  Checkbox,
+} from '@material-ui/core';
+import {
+  AccountCircle,
+  Lock,
+} from '@material-ui/icons'
 
 import './stylesheets/reset.scss';
 import './stylesheets/application.scss';
