@@ -3,6 +3,7 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { teal, pink } from '@material-ui/core/colors';
+import GoogleLogin from 'react-google-login';
 
 import {
   AppBar,
@@ -34,6 +35,12 @@ const theme = createMuiTheme({
     useNextVariants: true,
   },
 });
+
+const responseGoogle = (response) => {
+  console.log(response);
+};
+
+const { GOOGLE_CLIENT_ID } = process.env;
 
 const App = () => (
   <React.Fragment>
@@ -102,7 +109,25 @@ const App = () => (
                 <FormControl style={{ width: '100%', marginTop: '1rem' }}>
                   <Button variant="contained" color="primary" style={{ width: '100%' }}>
                     Sign In
-              </Button>
+                  </Button>
+                  <GoogleLogin
+                    clientId={GOOGLE_CLIENT_ID}
+                    render={renderProps => (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        style={{ width: '100%' }}
+                        onClick={renderProps.onClick}
+                        disabled={renderProps.disabled}
+                      >
+                        Sign In with Google
+                      </Button>
+                    )}
+                    buttonText="Login"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    cookiePolicy="single_host_origin"
+                  />
                 </FormControl>
               </form>
               <div>
