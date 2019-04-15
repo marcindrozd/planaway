@@ -1,51 +1,3 @@
-import React from 'react';
-
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { teal, pink } from '@material-ui/core/colors';
-import GoogleLogin from 'react-google-login';
-
-import {
-  AppBar,
-  Grid,
-  Toolbar,
-  Typography,
-  Button,
-  Card,
-  CardContent,
-  TextField,
-  InputAdornment,
-  FormControl,
-  FormControlLabel,
-  Checkbox,
-} from '@material-ui/core';
-import {
-  AccountCircle,
-  Lock,
-} from '@material-ui/icons';
-
-import './stylesheets/application.scss';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: teal,
-    secondary: pink,
-  },
-  typography: {
-    useNextVariants: true,
-  },
-});
-
-const responseGoogle = (response) => {
-  console.log(response);
-};
-
-const { GOOGLE_CLIENT_ID } = process.env;
-
-const App = () => (
-  <React.Fragment>
-    <CssBaseline />
-    <MuiThemeProvider theme={theme}>
       <div className="App">
         <AppBar position="static" style={{ height: '77px' }}>
           <Toolbar style={{ height: '77px' }}>
@@ -139,9 +91,10 @@ const App = () => (
           </Card>
         </Grid>
       </div>
-    </MuiThemeProvider>
 
-  </React.Fragment>
-);
 
-export default App;
+const responseGoogle = (response) => {
+  console.log(response);
+};
+
+const { GOOGLE_CLIENT_ID } = process.env;

@@ -14,6 +14,14 @@ dotenvFiles.forEach((dotenvFile) => {
   dotenv.config({ path: dotenvFile, silent: true });
 });
 
-environment.plugins.prepend('Environment', new webpack.EnvironmentPlugin(JSON.parse(JSON.stringify(process.env))));
+environment.plugins.prepend(
+  'Environment',
+  new webpack.EnvironmentPlugin(JSON.parse(JSON.stringify(process.env))),
+);
+
+const sassLoader = environment.loaders.get('moduleSass');
+const cssLoader = sassLoader.use.find(el => el.loader === 'css-loader');
+
+cssLoader.options.localIdentName = '[folder]_[local]_[hash:base64:5]';
 
 module.exports = environment;
