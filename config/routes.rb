@@ -8,7 +8,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get :omniauth_callback, to: 'omniauth#callback'
-
   root "react_app#index"
 end
