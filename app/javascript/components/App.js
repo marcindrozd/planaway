@@ -1,46 +1,25 @@
 import React from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { teal, pink } from '@material-ui/core/colors';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+import routes from 'lib/routes';
+import theme from 'lib/theme';
+
 import Header from 'components/Header';
-
-import GoogleLogin from 'react-google-login';
-
-import {
-  AppBar,
-  Grid,
-  Toolbar,
-  Typography,
-  Button,
-  Card,
-  CardContent,
-  TextField,
-  InputAdornment,
-  FormControl,
-  FormControlLabel,
-  Checkbox,
-} from '@material-ui/core';
-import {
-  AccountCircle,
-  Lock,
-} from '@material-ui/icons';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: teal,
-    secondary: pink,
-  },
-  typography: {
-    useNextVariants: true,
-  },
-});
+import MyRoute from 'components/MyRoute';
 
 const App = () => (
   <MuiThemeProvider theme={theme}>
     <CssBaseline />
 
-    <Header />
+    <Router>
+      <Header />
+
+      <Switch>
+        {routes.map(route => <MyRoute key={route.title} {...route} />)}
+      </Switch>
+    </Router>
   </MuiThemeProvider>
 );
 

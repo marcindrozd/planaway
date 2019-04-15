@@ -5,6 +5,7 @@ import {
   Typography,
   Button,
 } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 import styles from './styles.module.scss';
 
@@ -17,8 +18,8 @@ const Header = () => (
       <Button color="inherit">
         Sign Up
       </Button>
-      <Button color="inherit">
-        Login
+      <Button component={Link} to="/sign_in" color="inherit">
+        Sign In
       </Button>
     </Toolbar>
   </AppBar>
