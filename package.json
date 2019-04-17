@@ -3,11 +3,20 @@
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "@rails/webpacker": "4.0.2",
+    "dotenv": "^7.0.0",
+    "i18next": "^15.0.9",
+    "i18next-browser-languagedetector": "^3.0.1",
+    "nprogress": "^0.2.0",
     "prop-types": "^15.6.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "styled-components": "^4.2.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-google-login": "^5.0.4",
+    "react-i18next": "^10.8.1",
+    "react-router-dom": "^5.0.0",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -17,6 +26,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "json-loader": "^0.5.7",
     "webpack-dev-server": "2.11.2"
   },
   "scripts": {
