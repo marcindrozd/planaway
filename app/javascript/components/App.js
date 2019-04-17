@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import routes from 'lib/routes';
 import theme from 'lib/theme';
+import 'lib/i18n';
 
 import Header from 'components/Header';
 import MyRoute from 'components/MyRoute';

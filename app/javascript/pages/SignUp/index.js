@@ -1,9 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const SignUp = () => (
-  <div>
-    Sign up
-  </div>
-);
+const SignUp = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div>
+      {t('Welcome to React')}
+    </div>
+  );
+};
 
 export default SignUp;
