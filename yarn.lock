@@ -3717,6 +3717,11 @@ hyphenate-style-name@^1.0.2:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
   integrity sha512-EcuixamT82oplpoJ2XU4pDtKGWQ7b00CD9f1ug9IaQ3p1bkHMiKCZ9ut9QDI6qsa6cpUuB+A/I+zLtdNK4n2DQ==
 
+i18next-browser-languagedetector@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-3.0.1.tgz#a47c43176e8412c91e808afb7c6eb5367649aa8e"
+  integrity sha512-WFjPLNPWl62uu07AHY2g+KsC9qz0tyMq+OZEB/H7N58YKL/JLiCz9U709gaR20Mule/Ppn+uyfVx5REJJjn1HA==
+
 i18next@^15.0.9:
   version "15.0.9"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-15.0.9.tgz#42536407a921bb5a8535a4c090a26f16827a1884"
@@ -4243,6 +4248,11 @@ jsesc@^2.5.1:
 jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
+
+json-loader@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/json-loader/-/json-loader-0.5.7.tgz#dca14a70235ff82f0ac9a3abeb60d337a365185d"
+  integrity sha512-QLPs8Dj7lnf3e3QYS1zkCo+4ZwqOiF9d/nZnYozTISxXWCfNs9yuky5rJw4/W34s7POaNlbZmQGaB5NiXCbP4w==
 
 json-parse-better-errors@^1.0.1, json-parse-better-errors@^1.0.2:
   version "1.0.2"
