@@ -15,7 +15,7 @@ const Header = () => (
       <Typography variant="h6" color="inherit" className={styles.title}>
         Planaway
       </Typography>
-      <Button color="inherit">
+      <Button component={Link} to="/sign_up" color="inherit">
         Sign Up
       </Button>
       <Button component={Link} to="/sign_in" color="inherit">
