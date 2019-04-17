@@ -4,6 +4,8 @@ import nprogress from 'nprogress';
 
 import 'nprogress/nprogress.css';
 
+import './styles.module.scss';
+
 class MyRoute extends React.Component {
   componentWillMount() {
     nprogress.start();
