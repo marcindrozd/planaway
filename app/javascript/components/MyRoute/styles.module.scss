@@ -1,14 +1,14 @@
-$progress-color: #E91E63;
+@value pink from "../../lib/colors.scss";
 
 :global(#nprogress .bar) {
-  background: $progress-color;
+  background: pink;
 }
 
 :global(#nprogress .peg) {
-  box-shadow: 0 0 10px $progress-color, 0 0 5px $progress-color;
+  box-shadow: 0 0 10px pink, 0 0 5px pink;
 }
 
 :global(#nprogress .spinner-icon) {
-  border-top-color: $progress-color;
-  border-left-color: $progress-color;
+  border-top-color: pink;
+  border-left-color: pink;
 }

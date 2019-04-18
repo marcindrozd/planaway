@@ -6,9 +6,6 @@ const TextField = ({
   form: { touched, errors },
   ...props,
 }) => {
-  console.log('props', props);
-  console.log('field', field);
-
   return (
     <>
       <MaterialTextField

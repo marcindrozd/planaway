@@ -6,12 +6,10 @@ import {
   CardHeader,
   CardContent,
   FormControl,
-  FormHelperText,
-  TextField,
   Button,
 } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
-import MyTextField from 'components/TextField';
+import TextField from 'components/TextField';
 
 import styles from './styles.module.scss';
 
@@ -71,20 +69,26 @@ const SignUp = () => {
               isSubmitting,
             }) => (
               <Form>
-                <FormControl style={{ width: '100%' }} margin="normal" error={errors.username && touched.username}>
-                  <Field type="text" label="Username" name="username" component={MyTextField} />
-                </FormControl>
+                <Grid container spacing={16}>
+                  <Grid item xs={12} sm={6}>
+                    <FormControl style={{ width: '100%' }} margin="normal" error={errors.username && touched.username}>
+                      <Field type="text" label="Username" name="username" component={TextField} />
+                    </FormControl>
+                  </Grid>
 
-                <FormControl style={{ width: '100%' }} margin="normal" error={errors.email && touched.email}>
-                  <Field type="email" label="Email" name="email" component={MyTextField} />
-                </FormControl>
+                  <Grid item xs={12} sm={6}>
+                    <FormControl style={{ width: '100%' }} margin="normal" error={errors.email && touched.email}>
+                      <Field type="email" label="Email" name="email" component={TextField} />
+                    </FormControl>
+                  </Grid>
+                </Grid>
 
                 <FormControl style={{ width: '100%' }} margin="normal" error={errors.password && touched.password}>
-                  <Field type="password" label="Password" name="password" component={MyTextField} />
+                  <Field type="password" label="Password" name="password" component={TextField} />
                 </FormControl>
 
                 <FormControl style={{ width: '100%' }} margin="normal" error={errors.passwordConfirmation && touched.passwordConfirmation}>
-                  <Field type="password" label="Password Confirmation" name="passwordConfirmation" component={MyTextField} />
+                  <Field type="password" label="Password Confirmation" name="passwordConfirmation" component={TextField} />
                 </FormControl>
 
                 <FormControl style={{ width: '100%' }} margin="normal">
