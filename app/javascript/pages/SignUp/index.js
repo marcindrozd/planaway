@@ -72,7 +72,7 @@ const SignUp = () => {
                 <Grid container spacing={16}>
                   <Grid item xs={12} sm={6}>
                     <FormControl style={{ width: '100%' }} margin="normal" error={errors.username && touched.username}>
-                      <Field type="text" label="Username" name="username" component={TextField} />
+                      <Field type="text" label="Username" name="username" component={TextField} error={errors.username && touched.username} />
                     </FormControl>
                   </Grid>
 

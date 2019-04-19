@@ -2,9 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import nprogress from 'nprogress';
 
-import 'nprogress/nprogress.css';
-
-import './styles.module.scss';
+import 'styles/nprogress.scss';
 
 class MyRoute extends React.Component {
   componentWillMount() {
